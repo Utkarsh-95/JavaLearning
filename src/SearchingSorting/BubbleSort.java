@@ -23,7 +23,6 @@ public class BubbleSort {
         int size = array.length;
         sortArray(Arrays.toString(array));
         for (int i = 0; i < size - 1; i++) {// this loop is for array index
-            boolean swapped = true;
             for (int j = 0; j < size - i - 1; j++) {// this loop is for element of array at that index
                 // To sort in descending order, change > to < in this line.
                 if (array[j] > array[j + 1]) {
@@ -31,11 +30,7 @@ public class BubbleSort {
                     int temp = array[j];
                     array[j] = array[j + 1];
                     array[j + 1] = temp;
-                    swapped = false;
                 }
-            }
-            if (swapped == true) {
-                break;
             }
         }
         sortArray(Arrays.toString(array));

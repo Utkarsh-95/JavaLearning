@@ -14,8 +14,8 @@ public class BinarySearch {
     public int search(int arr[], int left, int right, int x) {
         if (right >= left) {
 
-//            int mid = left + (right - left) / 2;
-            int mid = (left + right) / 2;
+            int mid = left + (right - left) / 2;
+//            int mid = (left + right) / 2;
 //            System.out.println(left + "-" + mid + "-" + right + "->" + x);
 
             if (arr[mid] == x) {//best case
