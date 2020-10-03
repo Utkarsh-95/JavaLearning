@@ -7,6 +7,7 @@ package leetproblem;
 
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
@@ -33,12 +34,28 @@ public class Concordance {
             concordance.put(charAt, set);
         }
 
+//        1st way
+        /*for (Map.Entry<Character, Set<Integer>> entry : concordance.entrySet()) {
+            System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
+        }
+        
+//        2nd way
+        concordance.entrySet().forEach((entry) -> {
+            System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
+        });
+//        3rd way
+        Iterator<Map.Entry<Character, Set<Integer>>> itr = concordance.entrySet().iterator();
+
+        while (itr.hasNext()) {
+            Map.Entry<Character, Set<Integer>> entry = itr.next();
+            System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
+        }*/
         return concordance;
     }
 
     public static void main(final String[] args) {
 
-        System.out.println(Concordance.characterConcordance("IS Java 100% Object ??"));
+        System.out.println(Concordance.characterConcordance("Is Java 100% Object ??"));
 //        {a=[5, 7], b=[15], c=[18], %=[12], e=[17], I=[1], J=[4], j=[16], O=[14], 0=[10, 11], 1=[9], S=[2], t=[19], v=[6], ?=[21, 22]}
     }
 }
