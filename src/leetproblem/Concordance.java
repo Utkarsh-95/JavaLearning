@@ -5,6 +5,7 @@
  */
 package leetproblem;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -49,6 +50,19 @@ public class Concordance {
         while (itr.hasNext()) {
             Map.Entry<Character, Set<Integer>> entry = itr.next();
             System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
+        }
+//        getting all the keys from hashmap
+        Set keys = concordance.keySet();
+        Iterator i = keys.iterator();
+        while (i.hasNext()) {
+            System.out.println(i.next());
+        }
+
+//        getting all the values from hashmap
+        Collection getValues = concordance.values();
+        i = getValues.iterator();
+        while (i.hasNext()) {
+            System.out.println(i.next());
         }*/
         return concordance;
     }
