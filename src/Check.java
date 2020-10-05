@@ -21,7 +21,41 @@ class FinalCheck {
 
 public class Check {
 
+    static String findSum(String str1, String str2) {
+
+        int sum = 0;
+        int carry = 0;
+        StringBuilder remain = new StringBuilder();
+        int n1 = str1.length() - 1, n2 = str2.length() - 1;
+
+        while (n1 >= 0 || n2 >= 0) {
+            sum = carry;
+            if (n1 >= 0) {
+                sum += str1.charAt(n1) - '0';
+                n1--;
+            }
+            if (n2 >= 0) {
+                sum += str2.charAt(n2) - '0';
+                n2--;
+            }
+
+            carry = sum / 10;
+            remain.insert(0, sum % 10);
+
+        }
+
+        if (carry > 0) {
+            remain.insert(0, carry);
+        }
+
+        return remain.toString();
+    }
+
     public static void main(String[] args) {
-        FinalCheck fc = new FinalCheck();
+//        FinalCheck fc = new FinalCheck();
+
+        String s1 = "123879898980989";
+        String s2 = "123879898980989";
+        System.out.println(findSum(s1, s2));
     }
 }
