@@ -54,8 +54,8 @@ public class Check {
     public static void main(String[] args) {
 //        FinalCheck fc = new FinalCheck();
 
-        String s1 = "123879898980989";
-        String s2 = "123879898980989";
+        String s1 = "199";
+        String s2 = "199";
         System.out.println(findSum(s1, s2));
     }
 }
