@@ -48,7 +48,7 @@ public class QuickSort {
 	arr[] --> Array to be sorted, 
 	low --> Starting index, 
 	high --> Ending index */
-    void sort(int arr[], int low, int high) {
+    void sort(int arr[], int low, int high) {//arr, 0, 2
         if (low < high) {
             /* pi is partitioning index, arr[pi] is 
 			now at right place */
@@ -61,7 +61,7 @@ public class QuickSort {
     }
 
     public static void main(String args[]) {
-        int arr[] = {2, 10, 4, 6, 20, 1, 9};
+        int arr[] = {2, 10, 4};
         int size = arr.length;
 
         QuickSort qs = new QuickSort();

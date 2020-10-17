@@ -60,8 +60,8 @@ public class RotationofMatrix {
         {5, 6, 7, 8},
         {9, 10, 11, 12},
         {13, 14, 15, 16}};
-        rotate90Clockwise(arr);
-//        rotate90AntiClockwise(arr);
+//        rotate90Clockwise(arr);
+        rotate90AntiClockwise(arr);
         printMatrix(arr);
     }
 }

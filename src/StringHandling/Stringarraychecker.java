@@ -1,6 +1,5 @@
 package StringHandling;
 
-
 import java.util.HashMap;
 
 public class Stringarraychecker {

@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 
+import java.math.BigDecimal;
+
 /**
  *
  * @author Utkarsh Pratap Singh
@@ -54,8 +56,12 @@ public class Check {
     public static void main(String[] args) {
 //        FinalCheck fc = new FinalCheck();
 
-        String s1 = "199";
-        String s2 = "199";
+        String s1 = "199.20";
+        String s2 = "199.00";
+
+        BigDecimal result = new BigDecimal(s1).add(new BigDecimal(s2));
+        System.out.println(result);
+
         System.out.println(findSum(s1, s2));
     }
 }

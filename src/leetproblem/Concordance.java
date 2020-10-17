@@ -28,9 +28,12 @@ public class Concordance {
                 continue; // ignore spaces
             }
             Set<Integer> set = concordance.get(charAt);
-            if (set == null) {
+            if (!concordance.containsKey(charAt)) {
                 set = new HashSet<>();
             }
+//            if (set == null) {
+//                set = new HashSet<>();
+//            }
             set.add(i + 1); // use i for 0-indexed, or (i+1) for 1-indexed positions
             concordance.put(charAt, set);
         }

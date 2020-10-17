@@ -1,9 +1,10 @@
+package Imp;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -28,7 +29,7 @@ public class PriorityQueueLearning {
 //        }
 //        customized min heap
         PriorityQueue<String> pQueue = new PriorityQueue<>((t, t1) -> {
-            System.out.println(t + " " + t1);
+//            System.out.println(t + " " + t1);
             return (int) (hm.get(t) == hm.get(t1) ? t1.compareTo(t) : hm.get(t) - hm.get(t1));
         });
 
@@ -41,8 +42,11 @@ public class PriorityQueueLearning {
 
         Iterator iterator = pQueue.iterator();
 
-        while (iterator.hasNext()) {
-            System.out.print(iterator.next() + " ");
+//        while (iterator.hasNext()) {
+//            System.out.print(iterator.next() + " ");
+//        }
+        while (!pQueue.isEmpty()) {
+            System.out.print(pQueue.poll() + " ");
         }
 
     }

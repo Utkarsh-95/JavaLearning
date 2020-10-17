@@ -9,8 +9,7 @@ package volkstest;
  *
  * @author Utkarsh Pratap Singh
  */
-// Java program to count ways to build street 
-// under given constraints 
+// Java program to count ways to build street under given constraints 
 public class CounrWays {
 
 // function to count ways of building 
