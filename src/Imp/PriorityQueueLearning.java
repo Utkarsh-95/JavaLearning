@@ -55,11 +55,11 @@ public class PriorityQueueLearning {
         ArrayList<Integer> al = new ArrayList<>(Arrays.asList(arr));
 
 //        for max heap
-        PriorityQueue<Integer> pQueue = new PriorityQueue<>((t, t1) -> {
-            return t1.compareTo(t); //To change body of generated lambdas, choose Tools | Templates.
-        });
+//        PriorityQueue<Integer> pQueue = new PriorityQueue<>((t, t1) -> {
+//            return t1.compareTo(t);
+//        });
 //      for min heap
-//        PriorityQueue<Integer> pQueue = new PriorityQueue<>();
+        PriorityQueue<Integer> pQueue = new PriorityQueue<>();
 
         for (Integer a : al) {
             pQueue.add(a);
@@ -74,19 +74,19 @@ public class PriorityQueueLearning {
         System.out.println("Second Greatest element = " + pQueue.peek());
 
 //        System.out.println("Sum of two largest number = " + (pQueue.poll() + pQueue.peek()));
-        Iterator iterator = pQueue.iterator();
-
-        while (iterator.hasNext()) {
-            System.out.print(iterator.next() + " ");
-        }
+//        Iterator iterator = pQueue.iterator();
+//
+//        while (iterator.hasNext()) {
+//            System.out.print(iterator.next() + " ");
+//        }
     }
 
     public static void main(String args[]) {
 
-//        priorityQueue(1, 2, 5, 8, 11, 0, 22, 88);
+        priorityQueue(1, 2, 5, 8, 11, 0, 22, 88);
         ArrayList<String> als = new ArrayList<>(Arrays.asList("Java", "Java", "Java", "Java", "Java",
                 "Python", "Python", "Python", "Angular", "Angular", "Angular", "JQuery"));
-        frequency(als);
+//        frequency(als);
 
     }
 }
