@@ -7,6 +7,7 @@ package ListofQues;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 /**
  *
@@ -16,7 +17,8 @@ public class StringQues {
 
     public static void main(String[] args) {
 //        Reverse the string
-//        System.out.println(reverseString("HEISAGOODBOY"));
+//        System.out.println(reverseStringwithTwoPointers("HEISAGOODBOY"));
+//        System.out.println("));("HEISAGOODBOY"));
 //        Check whether a String is Palindrome or not
 //        System.out.println(isPalindromeString("uttu"));
 //        Find Duplicate characters in a string
@@ -27,7 +29,23 @@ public class StringQues {
 //        System.out.println(checkStringRotationofAnother("ABCD", "CDAB"));
 //        check whether a string is a valid shuffle of two strings or not
 //        System.out.println(validShuffleofTwoStrings(s1, s2));
+//        Count the characters in the string
+        countChars("aabbdsddddddddccddeea");
 
+    }
+
+    private static String reverseStringwithTwoPointers(String str) {
+
+        char convertString[] = str.toCharArray();
+        int left = 0, right = str.length() - 1;
+        while (left < right) {
+            char temp = convertString[left];
+            convertString[left] = convertString[right];
+            convertString[right] = temp;
+            left++;
+            right--;
+        }
+        return String.valueOf(convertString);
     }
 
     private static String reverseString(String str) {
@@ -95,4 +113,23 @@ public class StringQues {
         return false;
     }
 
+    private static void countChars(String s) {
+        TreeMap<Character, Integer> tm = new TreeMap<>();
+        int counter = 0;
+
+        for (int i = 0; i < s.length(); i++) {
+            if (!tm.containsKey(s.charAt(i))) {
+                tm.put(s.charAt(i), 1);
+            } else {
+                counter = tm.get(s.charAt(i));
+                tm.put(s.charAt(i), counter + 1);
+            }
+//             tm.put(s.charAt(i), tm.getOrDefault(s.charAt(i), 0) + 1);
+        }
+
+        tm.entrySet().stream().forEach((Map.Entry<Character, Integer> e) -> {
+            System.out.println(e.getKey() + " " + e.getValue());
+        });
+
+    }
 }

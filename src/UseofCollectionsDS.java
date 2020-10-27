@@ -30,7 +30,7 @@ public class UseofCollectionsDS {
 
     public static void Hashmap() {
 
-        HashMap<String, Integer> map = new HashMap<>();
+        Map<String, Integer> map = new HashMap<>();
 //        map.put(new Key("utkarsh"), "ALL");
         map.put("utkarsh", 30);
         map.put("a", 1000);
@@ -38,6 +38,9 @@ public class UseofCollectionsDS {
         map.put("c", 300);
         map.put("d", 400);
 
+        System.out.println("---------------------------------------------------");
+        map.entrySet().stream().forEach(x -> System.out.println(x));
+        System.out.println("---------------------------------------------------");
 //        for Sorting a collections
 //        System.out.println("HashMap before sorting, random order ");
 //        Set<Entry<String, Integer>> entries = map.entrySet();
@@ -90,9 +93,9 @@ public class UseofCollectionsDS {
             System.out.println("Key found in table");
         }
 
-        marks.clear();
-
-        System.out.println(marks);
+//        marks.clear();
+        marks.forEach(
+                (k, v) -> System.out.println("Key : " + k + ", Value : " + v));
     }
 
     public static void LinkedList() {
@@ -107,9 +110,7 @@ public class UseofCollectionsDS {
         // Display LinkList elements
         System.out.println("LinkedList before: " + list);
 
-        /* poll(): Retrieves and removes the head (first element)
-      * of this list.
-         */
+        /* poll(): Retrieves and removes the head (first element) of this list.*/
         System.out.println("Element removed: " + list.poll());
         System.out.println("Element removed: " + list.pollFirst());
         System.out.println("Element Retrived: " + list.peekLast());
@@ -143,9 +144,9 @@ public class UseofCollectionsDS {
 
     public static void main(String[] args) {
 //        List();
-        Hashmap();
+//        Hashmap();
 //        HashTable();
-//        LinkedList();
+        LinkedList();
 //        ConvertHashSettoTreeSet();
     }
 }

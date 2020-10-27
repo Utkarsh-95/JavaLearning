@@ -42,7 +42,7 @@ class Demo {
 
     public static void main(String args[]) throws Exception {
         // Creating object whose property is to be checked 
-        Test obj = new Test();
+        Reflection obj = new Reflection();
 
         // Creating class object from the object using 
         // getclass method 

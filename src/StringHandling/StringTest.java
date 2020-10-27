@@ -23,6 +23,8 @@ public class StringTest {
         System.out.println(s3 == s4);
 
         String s5 = "uttu";
+        s5.concat("singh");
+        System.out.println("ssssssssssssss55555555555555555555"+s5);
         StringBuffer s6 = new StringBuffer();
         s6.append("uttu");
         System.out.println(s5.equals(s6) + "--");

@@ -11,7 +11,7 @@ import java.util.Stack;
  *
  * @author Utkarsh Pratap Singh
  */
-public class CheckDouble {
+public class CalcCheckDouble {
 
     public static int evaluateexpression(String expression) {
 
@@ -102,7 +102,7 @@ public class CheckDouble {
         System.out.println("Enter the  value with expression");
         Scanner sc = new Scanner(System.in);
         String expr = sc.nextLine();
-        System.out.println("Output of evaluateexpression string:::" + CheckDouble.evaluateexpression(expr));
+        System.out.println("Output of evaluateexpression string:::" + evaluateexpression(expr));
 
     }
 

@@ -1,4 +1,3 @@
-// Java program to illustrate HashMap drawbacks 
 
 import java.util.HashMap;
 import java.util.concurrent.ConcurrentHashMap;

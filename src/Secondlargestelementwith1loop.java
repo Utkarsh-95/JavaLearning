@@ -12,30 +12,29 @@ public class Secondlargestelementwith1loop {
 
     /* Function to print the second largest elements */
     public static void print2largest(int arr[], int arr_size) {
-        int i, left, right;
+        int i, firstMax = 0, secondMax = 0;
 
         /* There should be atleast two elements */
         if (arr_size < 2) {
             System.out.print(" Invalid Input ");
             return;
         }
-
-        left = right = Integer.MIN_VALUE;
+//        firstMax = secondMax = Integer.MIN_VALUE;
         for (i = 0; i < arr_size; i++) {
             /* If current element is smaller than first then update both first and second */
-            if (arr[i] > left) {
-                right = left;
-                left = arr[i];
-            } else if (arr[i] > right && arr[i] != left) {
+            if (arr[i] > firstMax) {
+                secondMax = firstMax;
+                firstMax = arr[i];
+            } else if (arr[i] > secondMax && arr[i] != firstMax) {
                 /* If arr[i] is in between first and second then update second */
-                right = arr[i];
+                secondMax = arr[i];
             }
         }
 
-        if (right == Integer.MIN_VALUE) {
+        if (secondMax == Integer.MIN_VALUE) {
             System.out.print("There is no second largest element\n");
         } else {
-            System.out.print("The second largest element is " + right);
+            System.out.print("The second largest element is " + secondMax);
         }
     }
 

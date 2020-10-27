@@ -19,9 +19,9 @@ public class CountNumberOfWordsInString {
 
 //        countNumberOfWords(s);
 //        System.out.println();
-//        System.out.println(countofWords(s));
-//        System.out.println(printConsonentsAndVowelswithAndCondition(s1));
-        System.out.println(printConsonentsAndVowelswithHashSet(s1));
+        System.out.println("Count " + countofWords(s));// total no of words in the string
+        System.out.println("Print Consonent -" + printConsonentsAndVowelswithAndCondition(s1));
+        System.out.println("Print Consonent =" + printConsonentsAndVowelswithHashSet(s1));
 
 //        System.out.println(System.getProperty("java.version"));
 //        System.out.println(System.getProperty("java.runtime.version"));
@@ -74,19 +74,20 @@ public class CountNumberOfWordsInString {
     }
 
     public static void countNumberOfWords(String line) {
-        System.out.println("=" + line.split(" ").length); //won't work with tabs and multiple spaces
+//        System.out.println("=" + line.split(" ").length); //won't work with tabs and multiple spaces
 
         String trimmedLine = line.trim();
         int count = trimmedLine.isEmpty() ? 0 : trimmedLine.split("\\s+").length;
 
-        System.out.println(count);
+        System.out.println("Total no of Words " + count);
     }
 
     public static int countofWords(String s) {
+//        flag ---------- (state) is to check if word is occuring first time or not
         int in = 1;
         int out = 0;
         int state = out;
-        int wc = 0;
+        int wc = 0;//word counter
 
         for (int i = 0; i < s.length(); i++) {
 

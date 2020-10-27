@@ -5,18 +5,15 @@
  */
 package nagarro;
 
-import java.util.ArrayDeque;
-import java.util.Deque;
-import java.io.*;
 import java.util.Stack;
 
 /**
  *
  * @author Utkarsh Pratap Singh
  */
-public class Brackets {
+public class BracketsParanthesis {
 
-    private static boolean checkBalance(String input) {//=== and == diff in js jquery
+    private static boolean checkBalance(String input) {//=== for data and data type and == only check datatype diff in js jquery
 
 //        Deque<Character> st = new ArrayDeque<>();
         Stack<Character> st = new Stack<>();
