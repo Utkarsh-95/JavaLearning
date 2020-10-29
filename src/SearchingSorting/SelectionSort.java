@@ -28,7 +28,7 @@ public class SelectionSort<T> {
         for (int i = 0; i < size - 1; i++) {//O(n) Complexity
             int min_idx = i;// for selecting minimum index to sort
             for (int j = i + 1; j < size; j++) {//O(n) Complexity and j=j+1 O(1) Complexity
-                if (array[j] < array[min_idx]) { //a[1] < a[0] = 9<4, 3<4 -> min_idx = 2
+                if (array[j] < array[min_idx]) { //a[2] < a[0] = 3<4 -> min_idx = 2
                     min_idx = j;
                 }
             }

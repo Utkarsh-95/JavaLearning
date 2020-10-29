@@ -11,16 +11,17 @@ package OOPSException;
  */
 class SuperClassA {
 
-    public void foo() {
-        System.out.println("SuperClassA");
+    public SuperClassA(String s) {
+        System.out.print("A");
     }
-
 }
 
 class SubClassB extends SuperClassA {
 
-    public void bar() {
-        System.out.println("SubClassB");
+//    by default jvm call super to default constructor
+    public SubClassB(String s) {
+        super(s);
+        System.out.print("B");
     }
 
 }
@@ -28,9 +29,7 @@ class SubClassB extends SuperClassA {
 public class InheritanceTest {
 
     public static void main(String args[]) {
-        SubClassB a = new SubClassB();
-
-        a.foo();
-        a.bar();
+        new SubClassB("C");
+        System.out.println(" ");
     }
 }

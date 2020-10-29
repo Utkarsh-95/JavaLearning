@@ -5,8 +5,12 @@
  */
 package ListofQues;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.PriorityQueue;
 import java.util.TreeMap;
 
 /**
@@ -30,7 +34,11 @@ public class StringQues {
 //        check whether a string is a valid shuffle of two strings or not
 //        System.out.println(validShuffleofTwoStrings(s1, s2));
 //        Count the characters in the string
-        countChars("aabbdsddddddddccddeea");
+//        countChars("aabbdsddddddddccddeea");
+//        kth closest element
+        int arr[] = {-2, -1, 1, 2, 3, 4};
+        int k = 4, x = 3;
+        System.out.println(findClosestElements(arr, k, x));
 
     }
 
@@ -131,5 +139,33 @@ public class StringQues {
             System.out.println(e.getKey() + " " + e.getValue());
         });
 
+    }
+
+    public static List<Integer> findClosestElements(int[] arr, int k, int x) {
+
+        List<Integer> result = new ArrayList<>();
+        Map<Integer, Integer> hm = new HashMap<>();
+
+        for (Integer a : arr) {
+            hm.put(a, x - a);
+        }
+
+        PriorityQueue<Integer> pQueue = new PriorityQueue<>((Integer t, Integer t1) -> {
+            return hm.get(t) - hm.get(t1);
+        });
+
+        hm.entrySet().stream().forEach(e -> {
+            pQueue.add(e.getKey());
+            if (pQueue.size() > k) {
+                pQueue.poll();
+            }
+        });
+
+        pQueue.stream().forEach(e -> {
+            result.add(e);
+        });
+
+        Collections.sort(result);
+        return result;
     }
 }

@@ -31,8 +31,7 @@ public class InsertionSort {
         int[] arr = sort_arr;
         sortArray(Arrays.toString(arr));
 
-        for (int i = 0, size = arr.length; i < size; i++) {
-            int j = i;
+        for (int j = 0, size = arr.length; j < size; j++) {
 
             while (j > 0 && arr[j - 1] > arr[j]) {//here checking 0 index with 1
                 int temp = arr[j];

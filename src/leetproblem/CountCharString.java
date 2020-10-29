@@ -38,6 +38,6 @@ public class CountCharString {
     }
 
     public static void main(String[] args) {
-        getOccuringChar("aacee");
+        getOccuringChar("acAabCcb");
     }
 }
