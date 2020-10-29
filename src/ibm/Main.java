@@ -25,8 +25,9 @@ public class Main {
             throw new Derived2();
         } catch (Base b) {
             System.out.println("Caught base class exception");
-        } catch (Derived2 d) {
-            System.out.println("Caught derived class exception");
         }
+//        catch (Derived2 d) {
+//            System.out.println("Caught derived class exception");
+//        }
     }
 }

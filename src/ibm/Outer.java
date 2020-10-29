@@ -5,7 +5,6 @@ package ibm;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Utkarsh Pratap Singh
@@ -14,8 +13,8 @@ public class Outer {
 
     public static int temp1 = 1;
     private static int temp2 = 2;
-    public int temp3 = 3;
-    private int temp4 = 4;
+    public static int temp3 = 3;
+    private static int temp4 = 4;
 
     public static class Inner {
 
@@ -29,7 +28,7 @@ public class Outer {
     public static void main(String[] args) {
         Outer.Inner obj = new Outer.Inner();
         System.out.println(obj.getSum());
-        
+
     }
 
 }

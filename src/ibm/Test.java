@@ -12,7 +12,7 @@ package ibm;
  */
 class Derived {
 
-    protected final void getDetails() {
+    protected void getDetails() {
         System.out.println("Derived class");
     }
 }
@@ -20,7 +20,7 @@ class Derived {
 public class Test extends Derived {
 
     @Override
-    protected final void getDetails() {
+    protected void getDetails() {
         System.out.println("Test class");
     }
 

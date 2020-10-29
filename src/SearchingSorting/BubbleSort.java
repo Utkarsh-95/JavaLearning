@@ -25,11 +25,11 @@ public class BubbleSort {
         for (int i = 0; i < size - 1; i++) {// this loop is for array index
             for (int j = 0; j < size - i - 1; j++) {// this loop is for element of array at that index
                 // To sort in descending order, change > to < in this line.
-                if (array[j] > array[j + 1]) {
+                if (array[j] > array[j + 1]) {//14 > 9 
                     // Swap if greater
-                    int temp = array[j];
-                    array[j] = array[j + 1];
-                    array[j + 1] = temp;
+                    int temp = array[j];// temp = 14
+                    array[j] = array[j + 1];// array[j] = 9
+                    array[j + 1] = temp;// array[j+1] = 14
                 }
             }
         }
