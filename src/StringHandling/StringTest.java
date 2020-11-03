@@ -12,6 +12,15 @@ package StringHandling;
 public class StringTest {
 
     public static void main(String[] args) {
+
+        String ss1 = new String("uttu");
+        StringBuilder ss2 = new StringBuilder("uttu");
+        System.out.println(ss1 + "=" + ss2);
+        System.out.println(ss1.equals(ss2.toString()));
+        System.out.println(ss2.equals(ss1));
+
+        System.out.println("-------------------------------------------");
+
         String s1 = new String("uttu");
         String s2 = new String("UTTU");
         System.out.println(s1.equals(s2));
@@ -24,7 +33,7 @@ public class StringTest {
 
         String s5 = "uttu";
         s5.concat("singh");
-        System.out.println("ssssssssssssss55555555555555555555"+s5);
+        System.out.println("ssssssssssssss55555555555555555555" + s5);
         StringBuffer s6 = new StringBuffer();
         s6.append("uttu");
         System.out.println(s5.equals(s6) + "--");

@@ -18,7 +18,7 @@ interface InterfaceA {
         StringBuilder sb = new StringBuilder();
         sb.append("aa").append("bb");
         System.out.println(sb.toString());
-        
+
     }
 }
 
@@ -33,6 +33,7 @@ interface InterfaceB {
 
 public class TestClass implements InterfaceA, InterfaceB {
 
+    @Override
     public void shows() {
         // use super keyword to call the show 
         // method of PI1 interface 
@@ -49,6 +50,7 @@ public class TestClass implements InterfaceA, InterfaceB {
         d.show();
     }
 
+    @Override
     public void show() {
         System.out.println("Overriden Method");
     }

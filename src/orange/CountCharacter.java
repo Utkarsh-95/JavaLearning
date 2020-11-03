@@ -28,7 +28,14 @@ Output : D3 a2 C2 b2
 Solve above problem with O(n) time and O(1) space*/
     public static void main(String[] args) {
 
-        String str = "acAabCcb";
+        String str = "AcaabCcb";
+
+        /*char[] chhh = new char[str.length()];
+
+        for (int i = 0; i < str.length(); i++) {
+            chhh[i] = str.charAt(i);
+            System.out.print(str.charAt(i) + "-");
+        }*/
         char[] ch = str.toCharArray();
         Map<Character, Integer> map = new LinkedHashMap<>();
         for (char cc : ch) {
