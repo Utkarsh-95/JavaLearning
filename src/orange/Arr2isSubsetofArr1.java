@@ -14,7 +14,8 @@ import java.util.Set;
  */
 public class Arr2isSubsetofArr1 {
 
-    /*Given two unsorted array arr1[]  and arr2[] of m and n  integers respectively, Write a Java program which will check whether arr2 is subset of arr1 or not.
+    /*Given two unsorted array arr1[]  and arr2[] of m and n  integers respectively, 
+    Write a Java program which will check whether arr2 is subset of arr1 or not.
     Make sure time complexity should not be O(m*n).
     Example:
     Input: arr1[] = {1, 2, 7, 5, 6}, arr2[] = {1, 2, 7}

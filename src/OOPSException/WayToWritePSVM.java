@@ -19,7 +19,7 @@ interface TestA {
     String toString();
 }
 
-public class Test1 {
+public class WayToWritePSVM {
 
 //    public static void main(String[] args) {
 //            public static void main(String... args) {

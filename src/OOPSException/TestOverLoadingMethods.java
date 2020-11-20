@@ -40,7 +40,7 @@ class TestOverLoadingMethod {
 
 }
 
-public class Testsss {
+public class TestOverLoadingMethods {
 
     public static void main(String[] args) {
         TestOverLoadingMethod obj = new TestOverLoadingMethod();

@@ -5,13 +5,14 @@ package OOPSException;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Utkarsh Pratap Singh
  */
 //Creating interface that has 4 methods
 interface Ax {
+
+    String s = "";
 
     void a();//bydefault, public and abstract
 
@@ -23,10 +24,15 @@ interface Ax {
 }
 
 //Creating abstract class that provides the implementation of one method of A interface
-abstract class Bx implements Ax {
+abstract class Bx {
 
     public void c() {
         System.out.println("I am C");
+    }
+    
+    public static void main(String[] args) {
+        Bx v = new Bx() {};
+        v.c();
     }
 }
 

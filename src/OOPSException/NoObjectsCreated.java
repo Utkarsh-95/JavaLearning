@@ -5,10 +5,20 @@
  */
 package OOPSException;
 
+import java.util.Hashtable;
+
 /**
  *
  * @author Utkarsh Pratap Singh
  */
+class FinalizeDemo {
+
+    @Override
+    protected void finalize() throws Throwable {
+        System.out.println("finalized called");
+    }
+}
+
 public class NoObjectsCreated {
 
     static int noOfObjects = 0;
@@ -36,5 +46,19 @@ public class NoObjectsCreated {
 
         // We can also write t1.noOfObjects or  t2.noOfObjects or t3.noOfObjects 
         System.out.println(NoObjectsCreated.noOfObjects);
+
+        FinalizeDemo fdRef = new FinalizeDemo();
+        fdRef = null;
+        System.gc();
+        System.out.println(fdRef);
+
+        System.out.println(NoObjectsCreated.noOfObjects);
+
+//        Hashtable<String, String> ht = new Hashtable<>();
+//        ht.put(null, "hhj");
+//        System.out.println(ht);
+        Integer a = 10;
+        int b = a;
+
     }
 }

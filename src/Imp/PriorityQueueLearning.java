@@ -91,7 +91,7 @@ public class PriorityQueueLearning {
         secondLargestNumber(1, 2, 5, 8, 11, 0, 22, 88);
         ArrayList<String> als = new ArrayList<>(Arrays.asList("Java", "Java", "Java", "Java", "Java",
                 "Python", "Python", "Python", "Python", "Angular", "Angular", "Angular", "JQuery"));
-        frequency(als);
+//        frequency(als);
 
     }
 }
