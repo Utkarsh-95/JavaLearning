@@ -76,7 +76,7 @@ public class KthLargestElementFromTheTree {
         while (!q.isEmpty()) {
             BinaryNode<Integer> currentNode = q.poll();
             pQueue.add(currentNode.getValue());
-            if (pQueue.size() > 2) {
+            if (pQueue.size() > k) {
                 pQueue.poll();
             }
 
@@ -114,7 +114,7 @@ public class KthLargestElementFromTheTree {
         while (!q.isEmpty()) {
             BinaryNode<Integer> currentNode = q.poll();
             pQueue.add(currentNode.getValue());
-            if (pQueue.size() > 2) {
+            if (pQueue.size() > k) {
                 pQueue.poll();
             }
 
@@ -143,7 +143,7 @@ public class KthLargestElementFromTheTree {
         tree.root.getRight().getLeft().setRight(new BinaryNode(6));
         tree.root.getRight().getLeft().getRight().setLeft(new BinaryNode(7));
 
-        tree.kthLargestElement(2, tree.root);
-        tree.kthSmallestElement(2, tree.root);
+        tree.kthLargestElement(3, tree.root);
+        tree.kthSmallestElement(3, tree.root);
     }
 }

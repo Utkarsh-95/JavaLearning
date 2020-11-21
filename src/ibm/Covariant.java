@@ -10,9 +10,7 @@ package ibm;
  *
  * @author Utkarsh Pratap Singh
  */
-// Java program to demonstrate that we can have 
-// different return types if return type in 
-// overridden method is sub-type 
+// Java program to demonstrate that we can have different return types if return type in overridden method is sub-type 
 // Two classes used for return types. 
 class As {
 }
@@ -34,7 +32,7 @@ class Bases {
 class Deriveds extends Bases {
 
     @Override
-    Cs funs() {
+    Bs funs() {
         System.out.println("Derived fun()");
         return new Cs();
     }
