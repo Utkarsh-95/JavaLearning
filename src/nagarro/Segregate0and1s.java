@@ -30,8 +30,8 @@ public class Segregate0and1s {
             /* If left is smaller than right then there is a 1 at left 
 			and a 0 at right. Exchange arr[left] and arr[right]*/
             if (left < right) {
-                arr[left] = 0;
-                arr[right] = 1;
+                arr[left] = 1;
+                arr[right] = 0;
                 left++;
                 right--;
             }

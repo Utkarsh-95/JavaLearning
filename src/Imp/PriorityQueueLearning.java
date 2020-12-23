@@ -7,6 +7,7 @@ package Imp;
  */
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.PriorityQueue;
@@ -49,7 +50,7 @@ public class PriorityQueueLearning {
 
     }
 
-    public static void secondLargestNumber(Integer... arr) {
+    public static void secondLargestNumber(int kThElement, Integer... arr) {// var args Integer... arr must be last parameter
         ArrayList<Integer> al = new ArrayList<>(Arrays.asList(arr));
 
 //        for max heap
@@ -62,13 +63,13 @@ public class PriorityQueueLearning {
 //        al.stream().map((a) -> {
 //            pQueue.add(a);
 //            return a;
-//        }).filter((item) -> (pQueue.size() > 2)).forEachOrdered((item) -> {
+//        }).filter((item) -> (pQueue.size() > kThElement)).forEachOrdered((item) -> {
 //            //it runs on log(k) complexity
 //            pQueue.poll();
 //        });
         for (Integer a : al) {
             pQueue.add(a);
-            if (pQueue.size() > 2) {
+            if (pQueue.size() > kThElement) {
                 pQueue.poll();
             }
         }
@@ -86,12 +87,34 @@ public class PriorityQueueLearning {
 //        }
     }
 
+    public static void testPQueue() {
+
+        PriorityQueue tasks = new PriorityQueue();
+        tasks.add("task1");
+        tasks.add("task4");
+        tasks.add("task3");
+        tasks.add("task2");
+        tasks.add("task5");
+        System.out.println(tasks);
+
+        PriorityQueue reverseTasks = new PriorityQueue(Comparator.reverseOrder());
+        reverseTasks.add("task1");
+        reverseTasks.add("task4");
+        reverseTasks.add("task3");
+        reverseTasks.add("task2");
+        reverseTasks.add("task5");
+        System.out.println(reverseTasks);
+
+    }
+
     public static void main(String args[]) {
 
-        secondLargestNumber(1, 2, 5, 8, 11, 0, 22, 88);
-        ArrayList<String> als = new ArrayList<>(Arrays.asList("Java", "Java", "Java", "Java", "Java",
-                "Python", "Python", "Python", "Python", "Angular", "Angular", "Angular", "JQuery"));
+        Integer arr[] = {1, 2, 5, 8, 11, 0, 22, 88};
+        secondLargestNumber(2, arr);
+//        ArrayList<String> als = new ArrayList<>(Arrays.asList("Java", "Java", "Java", "Java", "Java",
+//                "Python", "Python", "Python", "Python", "Angular", "Angular", "Angular", "JQuery"));
 //        frequency(als);
+//        testPQueue();
 
     }
 }

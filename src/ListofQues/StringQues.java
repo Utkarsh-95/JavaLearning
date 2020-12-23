@@ -34,11 +34,11 @@ public class StringQues {
 //        check whether a string is a valid shuffle of two strings or not
 //        System.out.println(validShuffleofTwoStrings(s1, s2));
 //        Count the characters in the string
-//        countChars("aabbdsddddddddccddeea");
+        countChars("aabbdsddddddddccddeea");
 //        kth closest element
-        int arr[] = {-2, -1, 1, 2, 3, 4};
-        int k = 4, x = 3;
-        System.out.println(findClosestElements(arr, k, x));
+//        int arr[] = {-2, -1, 1, 2, 3, 4};
+//        int k = 4, x = 3;
+//        System.out.println(findClosestElements(arr, k, x));
 
     }
 
@@ -121,7 +121,7 @@ public class StringQues {
         return false;
     }
 
-    private static void countChars(String s) {
+    private static String countChars(String s) {
         TreeMap<Character, Integer> tm = new TreeMap<>();
         int counter = 0;
 
@@ -135,9 +135,17 @@ public class StringQues {
 //             tm.put(s.charAt(i), tm.getOrDefault(s.charAt(i), 0) + 1);
         }
 
+        for (Map.Entry<Character, Integer> entry : tm.entrySet()) {
+            Character key = entry.getKey();
+            Integer value = entry.getValue();
+
+            System.out.println(key + " => " + value);
+        }
+
         tm.entrySet().stream().forEach((Map.Entry<Character, Integer> e) -> {
-            System.out.println(e.getKey() + " " + e.getValue());
+            System.out.print(e.getKey() + "" + e.getValue());
         });
+        return null;
 
     }
 
